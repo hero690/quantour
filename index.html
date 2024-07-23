@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantour - Free Fire Esports Tournament</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between">
+            <a href="#" class="text-2xl font-bold">Quantour</a>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-400">About Us</a></li>
+                <li><a href="#register" class="hover:text-gray-400">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="text-center py-16">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Quantour</h1>
+        <p class="text-lg">Join the ultimate Free Fire esports tournament and prove your skills!</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-gray-800 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">About Us</h2>
+            <p class="text-lg">Quantour is the premier esports tournament for Free Fire players. Our mission is to bring together the best players from around the world to compete in an exciting and fair competition.</p>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Register for the Tournament</h2>
+            <form class="max-w-lg mx-auto bg-gray-800 p-8 rounded-lg">
+                <div class="mb-4">
+                    <label for="playerName" class="block text-left">Player Name</label>
+                    <input type="text" id="playerName" class="w-full p-2 bg-gray-700 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-left">Email</label>
+                    <input type="email" id="email" class="w-full p-2 bg-gray-700 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="teamName" class="block text-left">Team Name</label>
+                    <input type="text" id="teamName" class="w-full p-2 bg-gray-700 rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="region" class="block text-left">Region</label>
+                    <input type="text" id="region" class="w-full p-2 bg-gray-700 rounded" required>
+                </div>
+                <button type="submit" class="w-full p-2 bg-blue-500 hover:bg-blue-700 rounded">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const playerName = document.getElementById('playerName').value;
+            const email = document.getElementById('email').value;
+            const teamName = document.getElementById('teamName').value;
+            const region = document.getElementById('region').value;
+
+            // Simple validation
+            if(playerName === "" || email === "" || teamName === "" || region === "") {
+                alert("Please fill in all fields");
+            } else {
+                alert("Registration successful!");
+                // Here, you can add code to submit form data to a server
+            }
+        });
+    </script>
+
+</body>
+</html>
